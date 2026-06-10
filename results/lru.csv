@@ -1,0 +1,15 @@
+step,hit,hits,misses,evictions,hit_rate,policy,workload
+0,False,0,1,0,0.0,LRU,sample_workload
+1,False,0,2,0,0.0,LRU,sample_workload
+2,False,0,3,0,0.0,LRU,sample_workload
+3,True,1,3,0,0.25,LRU,sample_workload
+4,True,2,3,0,0.4,LRU,sample_workload
+5,False,2,4,1,0.333333,LRU,sample_workload
+6,True,3,4,1,0.428571,LRU,sample_workload
+7,True,4,4,1,0.5,LRU,sample_workload
+8,False,4,5,2,0.444444,LRU,sample_workload
+9,True,5,5,2,0.5,LRU,sample_workload
+10,True,6,5,2,0.545455,LRU,sample_workload
+11,False,6,6,3,0.5,LRU,sample_workload
+12,False,6,7,4,0.461538,LRU,sample_workload
+13,False,6,8,5,0.428571,LRU,sample_workload
