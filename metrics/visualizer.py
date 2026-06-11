@@ -157,7 +157,8 @@ class MetricsVisualizer:
         bars = ax.bar(names, values, color=self._bar_colors(names),
                       edgecolor="white", linewidth=0.8, zorder=3)
 
-        ax.set_ylim(0, max(values) * 1.2 if values else 1)
+        max_value = max(values) if values else 1
+        ax.set_ylim(0, max(max_value * 1.2, 1))
         ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%.1f%%"))
         self._apply_bar_labels(ax, bars, fmt="{:.1f}%")
         self._style_axes(ax, "Hit Rate Comparison", "Hit Rate (%)")
@@ -187,7 +188,8 @@ class MetricsVisualizer:
         bars = ax.bar(names, values, color=self._bar_colors(names),
                       edgecolor="white", linewidth=0.8, zorder=3)
 
-        ax.set_ylim(0, max(values) * 1.2 if values else 1)
+        max_value = max(values) if values else 1
+        ax.set_ylim(0, max(max_value * 1.2, 1))
         self._apply_bar_labels(ax, bars, fmt="{:.0f}")
         self._style_axes(ax, "Total Misses Comparison", "Total Misses")
 
@@ -216,7 +218,8 @@ class MetricsVisualizer:
         bars = ax.bar(names, values, color=self._bar_colors(names),
                       edgecolor="white", linewidth=0.8, zorder=3)
 
-        ax.set_ylim(0, max(values) * 1.2 if values else 1)
+        max_value = max(values) if values else 1
+        ax.set_ylim(0, max(max_value * 1.2, 1))
         self._apply_bar_labels(ax, bars, fmt="{:.0f}")
         self._style_axes(ax, "Total Evictions Comparison", "Total Evictions")
 

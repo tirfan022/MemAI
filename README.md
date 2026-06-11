@@ -70,3 +70,24 @@ Think of it in 3 layers:
 │   CSV Export, Simulator, Tests                   │
 └─────────────────────────────────────────────────┘
 You built Layer 1 — and without it, Layers 2 and 3 literally cannot exist.
+
+
+Benchmark Results (Capacity=32, Pages=100, Accesses=1000)
+
+Locality Workload:
+ARC   : 80.6%
+LRU   : 76.2%
+Clock : 73.5%
+FIFO  : 67.3%
+
+Random Workload:
+Clock : 31.5%
+FIFO  : 31.3%
+LRU   : 31.3%
+ARC   : 30.3%
+
+Looping Workload:
+All policies: 99%
+
+Sequential Workload:
+All policies: 0%
