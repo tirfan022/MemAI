@@ -1,0 +1,22 @@
+# --- Python Bytecode & Caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# --- Machine Learning Model Weights ---
+# Prevents large binary model files from bloat-tracking on GitHub
+cache/memai_weights.pt
+*.pt
+*.pth
+
+# --- Benchmark Output Data & Analytics ---
+# Ignores all the generated CSVs and graph images in the results folder
+results/
+
+# --- IDE and Workspace Configurations ---
+# Keeps your local editor setup separate from the codebase
+.vscode/
+.idea/
+*.suo
+*.swp

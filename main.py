@@ -18,7 +18,7 @@ from cache.clock import Clock
 from cache.arc   import ARC
 from metrics.collector  import MetricsCollector
 from metrics.visualizer import MetricsVisualizer
-from worksload.generator import WorkloadGenerator
+from workload.generator import WorkloadGenerator
 
 
 # ──────────────────────────────────────────
@@ -38,19 +38,15 @@ GRAPHS_DIR    = os.path.join(RESULTS_DIR, "graphs")
 #  Add new policies here — nothing else changes
 # ──────────────────────────────────────────
 
-def build_policies() -> dict:
-    """
-    Instantiate every cache policy at the configured capacity.
+from cache.memai_policy import MemAIPolicy
 
-    Returns:
-        dict: {policy_name: cache_instance}
-              e.g. {"FIFO": FIFO(32), "LRU": LRU(32), ...}
-    """
+def build_policies():
     return {
-        "FIFO":  FIFO(CAPACITY),
-        "LRU":   LRU(CAPACITY),
+        "FIFO": FIFO(CAPACITY),  # or whatever variable your code originally used
+        "LRU": LRU(CAPACITY),
         "Clock": Clock(CAPACITY),
-        "ARC":   ARC(CAPACITY),
+        "ARC": ARC(CAPACITY),
+        "MemAI": MemAIPolicy(CAPACITY), # Use your global capacity variable here directly
     }
 
 
