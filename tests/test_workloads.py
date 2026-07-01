@@ -1,4 +1,4 @@
-from worksload.generator import WorkloadGenerator
+from workload.generator import WorkloadGenerator
 
 
 def test_generator_stores_values():
