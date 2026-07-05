@@ -1,2 +1,6 @@
-pytest
+numpy
 pandas
+matplotlib
+torch
+gymnasium
+pytest
